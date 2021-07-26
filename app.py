@@ -51,7 +51,7 @@ def run_podio_tagui(self, args):
     os.system("rm tagui.log")
     return data
 
-def require_appkey(view_function):
+def require_appkey(view_function): #https://github.com/ericsopa/flask-api-key
     @wraps(view_function)
     def decorated_function(*args, **kwargs):
         with open('/home/rpa/tagui/API/api.key', 'r') as apikey:
@@ -103,7 +103,7 @@ def index():
     else:
         abort(400)
 
-@app.route('/status/<task_id>')
+@app.route('/status/<task_id>') #https://github.com/miguelgrinberg/flask-celery-example
 @require_appkey
 def taskstatus(task_id):
     task = long_task.AsyncResult(task_id)
