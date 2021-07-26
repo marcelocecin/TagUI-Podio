@@ -18,7 +18,7 @@ celery.conf.result_backend = 'redis://localhost:6379/0'
 @celery.task(bind=True)
 def save_podio_tagui(self, args):
     url = "https://procfu.com/exe/podio_app_item_get_raw.pf"
-    payload='app_id=YOUR_PODIO_APP_ID_HERE&app_item_id='+args['script'] #
+    payload='app_id=YOUR_PODIO_APP_ID_HERE&app_item_id='+args['script']
     headers = {'Authorization': 'Basic YOUR ProcFu Auth Token HERE','Content-Type': 'application/x-www-form-urlencoded','Cache-Control': 'no-cache'}
     response = requests.request("POST", url, headers=headers, data=payload)
     data = response.json()
