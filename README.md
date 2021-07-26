@@ -8,7 +8,7 @@
 ### this example uses SSL certificate issued by GoDaddy, but you can use any certificate, just search the internet for free options on how to issue yours
 
 1. instalar o [TagUI](https://github.com/kelaberetiv/TagUI) (install [TagUI](https://github.com/kelaberetiv/TagUI))
-2. utilizar o `app.py` para rodar a API (use `app.py` to run the API):
+2. utilizar o `app.py` para rodar a API - testado em servidor Linux Ubuntu (use `app.py` to run the API - tested on Ubuntu Linux server):
    - `celery -A python.app.celery worker --concurrency=1`
    - `celery -A python.app.celery flower`
    - `gunicorn -w 3 -b :5000 -t 30 --reload python.wsgi:app --certfile=ssl.crt --keyfile=ssl.key --ssl-version=TLS_SERVER`
@@ -24,6 +24,7 @@
 <img width="555" alt="" src="https://user-images.githubusercontent.com/2955762/127060840-dadf3ed6-7f3c-4197-961e-ab0e34505753.png">
 <img width="746" alt="" src="https://user-images.githubusercontent.com/2955762/127061110-92868563-0a2a-40e6-968c-d41cc277eaa1.png">
 6. dessa forma o script de exemplo básico será executado todos os dias no horário configurado (this way the basic example script will run every day at the configured time)
+<img width="760" alt="" src="https://user-images.githubusercontent.com/2955762/127065498-7be87b77-1b7f-4e43-9a3e-d578f5f56efc.png">
 
 ### em breve irei atualizar esse tutorial para mostrar um exemplo de script e nova versão de API que anexa a imagem `top_result.png` no Podio
 ### I will soon update this tutorial to show an example script and new API version that attaches the `top_result.png` image to Podio
