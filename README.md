@@ -1,7 +1,11 @@
-# tutorial serve apenas para quem utiliza o plano Premium do Podio, porque ele precisa do [PWA](https://help.podio.com/hc/en-us/sections/360005823819-Podio-Workflow-Automation) para fazer as automações
-# this tutorial is only for those who use the Podio Premium plan, because it needs [PWA](https://help.podio.com/hc/en-us/sections/360005823819-Podio-Workflow-Automation) to do the automations
-## este exemplo utiliza certificado SSL emitido pela GoDaddy, mas você pode usar qualquer certificado, basta pesquisar na internet opções gratuitas de como emitir o seu
-## this example uses SSL certificate issued by GoDaddy, but you can use any certificate, just search the internet for free options on how to issue yours
+# tutorial serve apenas para quem utiliza o plano Premium do Podio, porque ele precisa do [Podio Workflow Automation](https://workflow-automation.podio.com) [PWA](https://help.podio.com/hc/en-us/sections/360005823819-Podio-Workflow-Automation) para fazer as automações
+# this tutorial is only for those who use the Podio Premium plan, because it needs [Podio Workflow Automation](https://workflow-automation.podio.com) [PWA](https://help.podio.com/hc/en-us/sections/360005823819-Podio-Workflow-Automation) to do the automations
+
+## este tutorial também utiliza script do [ProcFu](https://procfu.com) - [Onde o PWA não atende a todas as suas necessidades, Procfu e Quivvy Tools podem ajudar](https://help.podio.com/hc/en-us/articles/360019409639-Top-10-Best-Practices-for-Podio-Workflow-Automation)
+## this tutorial also uses [ProcFu](https://procfu.com) script - [Where PWA doesn't meet all of your needs, Procfu and Quivvy Tools can help](https://help.podio.com/hc/en-us/articles/360019409639-Top-10-Best-Practices-for-Podio-Workflow-Automation)
+
+### este exemplo utiliza certificado SSL emitido pela GoDaddy, mas você pode usar qualquer certificado, basta pesquisar na internet opções gratuitas de como emitir o seu
+### this example uses SSL certificate issued by GoDaddy, but you can use any certificate, just search the internet for free options on how to issue yours
 
 1. instalar o [TagUI](https://github.com/kelaberetiv/TagUI) (install [TagUI](https://github.com/kelaberetiv/TagUI))
 2. utilizar o `app.py` para rodar a API (use `app.py` to run the API):
