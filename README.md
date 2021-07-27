@@ -14,7 +14,7 @@
 2. install [Celery with Redis](https://docs.celeryproject.org/en/stable/) and [Flower](https://flower.readthedocs.io/en/latest/)
 3. use `app.py` to run the API - tested on Ubuntu Linux server:
    - `celery -A python.app.celery worker --concurrency=1`
-   - `celery -A python.app.celery flower`
+   - `celery -A python.app.celery flower --certfile=ssl.crt --keyfile=ssl.key --basic_auth=user1:password1`
    - `gunicorn -w 3 -b :5000 -t 30 --reload python.wsgi:app --certfile=ssl.crt --keyfile=ssl.key --ssl-version=TLS_SERVER`
 4. [create an app](https://help.podio.com/hc/en-us/articles/201019278-Creating-apps-) on Podio with a [Multiline Text field](https://help.podio.com/hc/en-us/articles/201019298-The-fields-in-app-templates) and [unique ID TAG with three decimal fields](https://help.podio.com/hc/en-us/articles/201019348-Adding-Unique-IDs-to-your-app-items)
    - the field in red Name is not necessary, I used it just to make it easier to find when there are many registered scripts
